@@ -10,11 +10,11 @@ jobs:
         with:
           packages: tar rsync patch diffutils curl make unzip git m4 perl mingw64-x86_64-gcc-core
       - run: |
-          bash.exe curl -L https://github.com/fdopen/opam-repository-mingw/releases/download/0.0.0.2/opam64.tar.xz --output opam64.tar.xz
-          bash.exe tar -xf opam64.tar.xz
-          bash.exe opam32/install.sh
-          bash.exe opam init default "https://github.com/fdopen/opam-repository-mingw.git#opam2" -c "ocaml-variants.4.07.1+mingw64c" --disable-sandboxing
+          C:\cygwin\bin\bash.exe curl -L https://github.com/fdopen/opam-repository-mingw/releases/download/0.0.0.2/opam64.tar.xz --output opam64.tar.xz
+          C:\cygwin\bin\bash.exe tar -xf opam64.tar.xz
+          C:\cygwin\bin\bash.exe opam32/install.sh
+          C:\cygwin\bin\bash.exe opam init default "https://github.com/fdopen/opam-repository-mingw.git#opam2" -c "ocaml-variants.4.07.1+mingw64c" --disable-sandboxing
       - run: |
-          bash.exe unset OPAMROOT
-          bash.exe make
+          C:\cygwin\bin\bash.exe unset OPAMROOT
+          C:\cygwin\bin\bash.exe make
 
